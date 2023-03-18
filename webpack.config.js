@@ -1,5 +1,6 @@
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
+const path 					= require('path');
+const TerserPlugin 			= require('terser-webpack-plugin');
+const MiniCssExtractPlugin 	= require('mini-css-extract-plugin');
 
 module.exports = 
 {
@@ -39,4 +40,25 @@ module.exports =
 		port: 1338,
 		watchFiles: ['src/**/*'],
 	},
+	module: 
+	{
+		rules: 
+		[
+			{
+				test: /\.css$/i,
+				use: 
+				[
+			  		process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+			  		'css-loader',
+				],
+		  	},
+		],
+	},
+	plugins: 
+	[
+		new MiniCssExtractPlugin(
+		{
+			filename: process.env.NODE_ENV === 'production' ? 'grid.min.css' : 'grid.css',
+		}),
+	],
 };

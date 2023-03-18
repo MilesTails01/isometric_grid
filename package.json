@@ -5,30 +5,38 @@
   "main": "index.html",
   "scripts": {
     "test_prod": "eslint build/grid.min.js --fix --ext .js",
-	"test_dev": "eslint build/grid.js --fix --ext .js",
-	"build_prod": "webpack --mode production",
-	"build_dev": "webpack --mode development",
-	"start": "npm run live",
-	"open": "concurrently \"http-server -a localhost -p 1338\" \"open http://localhost:1338/\"",
-	"live": "webpack serve"
+    "test_dev": "eslint build/grid.js --fix --ext .js",
+    "build_prod": "webpack --mode production",
+    "build_dev": "webpack --mode development",
+    "start": "npm run live",
+    "open": "concurrently \"http-server -a localhost -p 1338\" \"open http://localhost:1338/\"",
+    "live": "webpack serve"
   },
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/MilesTails01/isometric_grid"
+    "type": "git",
+    "url": "git+https://github.com/MilesTails01/isometric_grid"
   },
-
   "author": "Tommy Dräger",
   "license": "MIT",
   "homepage": "https://github.com/MilesTails01/isometric_grid#readme",
-  "bugs": { "url": "https://github.com/MilesTails01/isometric_grid/issues" },
+  "bugs": {
+    "url": "https://github.com/MilesTails01/isometric_grid/issues"
+  },
+
+  "dependencies": {
+	"gl-matrix": "^3.4.3"
+  },
 
   "devDependencies": {
-	"concurrently": "^7.6.0",
-	"eslint": "^8.33.0",
-	"http-server": "^14.1.1",
-	"terser-webpack-plugin": "^5.3.6",
-	"webpack": "^5.75.0",
-	"webpack-cli": "^5.0.1",
-	"webpack-dev-server": "^4.11.1"
-}
+    "concurrently": "^7.6.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.33.0",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
 }

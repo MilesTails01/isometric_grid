@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: antiquewhite;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.grid {
+	
+	position: relative;
+	scale: 2;
+	image-rendering: pixelated;
+
+	height: 160px;		/*	32 * 10 / 2	*/
+	width: 32px;		/*	32			*/
+
+}
+
+.tile {
+	position: absolute;
+	/* transform: translateX(-50%) translateY(-25%); */
+	
+}
