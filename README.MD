@@ -15,6 +15,24 @@ In order to put the WFC project to use I want to use an isometric grid that I ca
 | ![image](https://user-images.githubusercontent.com/83541965/226106171-620b2a89-c901-424c-975a-acf1b2b4624d.png) | |
 | ---- | ---- |
 
+## Usage
+
+To install all needed packages
+```
+npm install
+```
+
+To build the module
+```
+npm run build_prod
+```
+
+To start the live server
+```
+npm start
+```
+
+## Other
 
 I originally planned to use 2x2 rotation and scale matrix. But the float precision is broken.
 
