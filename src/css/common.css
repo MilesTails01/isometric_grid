@@ -9,6 +9,7 @@ body {
 	background-color: antiquewhite;
 	position: absolute;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .container {
@@ -17,12 +18,17 @@ body {
 	image-rendering: pixelated;
 	position: relative;
 	height: 160px;		
-	width: 32px;		 
+	width: 32px;		
 
 }
 
 .tile {
 	position: absolute;	
+}
+
+.tile_select {
+	filter: brightness(1.5);
+	transform: translateY(-5px);
 }
 
 .dot {

@@ -22,11 +22,10 @@
   "bugs": {
     "url": "https://github.com/MilesTails01/isometric_grid/issues"
   },
-
   "dependencies": {
-	"gl-matrix": "^3.4.3"
+    "dat.gui": "^0.7.9",
+    "gl-matrix": "^3.4.3"
   },
-
   "devDependencies": {
     "concurrently": "^7.6.0",
     "css-loader": "^6.7.3",
