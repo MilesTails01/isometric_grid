@@ -4,8 +4,31 @@
   "description": "An approach to make an own isometric grid",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test_prod": "eslint build/grid.min.js --fix --ext .js",
+	"test_dev": "eslint build/grid.js --fix --ext .js",
+	"build_prod": "webpack --mode production",
+	"build_dev": "webpack --mode development",
+	"start": "npm run live",
+	"open": "concurrently \"http-server -a localhost -p 1338\" \"open http://localhost:1338/\"",
+	"live": "webpack serve"
   },
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/MilesTails01/isometric_grid"
+  },
+
   "author": "Tommy Dräger",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/MilesTails01/isometric_grid#readme",
+  "bugs": { "url": "https://github.com/MilesTails01/isometric_grid/issues" },
+
+  "devDependencies": {
+	"concurrently": "^7.6.0",
+	"eslint": "^8.33.0",
+	"http-server": "^14.1.1",
+	"terser-webpack-plugin": "^5.3.6",
+	"webpack": "^5.75.0",
+	"webpack-cli": "^5.0.1",
+	"webpack-dev-server": "^4.11.1"
+}
 }

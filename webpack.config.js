@@ -36,7 +36,7 @@ module.exports =
 			watch: true,
 		},
 		open: true,
-		port: 1337,
+		port: 1338,
 		watchFiles: ['src/**/*'],
 	},
 };
